@@ -1,0 +1,14 @@
+# /etc/fstab: static file system information.
+#
+#<device>	<mount point>		<type>		<options>									<dump><pass>
+/dev/sda6	/					ext4		noatime,nodiratime,relatime,errors=remount-ro	0	1
+/dev/sda5	/boot				ext2		noatime,nodiratime,relatime						0	2
+/dev/sda1	/boot/efi			vfat		umask=0077										0	0
+
+/dev/sda7	/home				auto		noatime,nodiratime,relatime						0	2
+/home/root	/root				none		bind											0	0
+
+/dev/sda2	/media/Windows8.1	ntfs		noauto											0	0
+
+/dev/sda8	none				swap		sw												0	0
+/dev/sr0	/media/cdrom0		auto		user,noauto										0	0
